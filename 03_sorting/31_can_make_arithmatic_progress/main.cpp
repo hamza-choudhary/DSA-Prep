@@ -6,6 +6,11 @@ using namespace std;
 
 using namespace std;
 
+//! Approach 1: first sort then check diff O(nLogn)
+//! Approach 2: using sets O(n) -> easy
+//! Approach 3: use cyclic sort O(n) -> its hard only 0.8 mb space difference
+
+//! Approach 3
 class Solution
 {
 public:
@@ -80,7 +85,6 @@ public:
   }
 };
 
-//! Approach 1: first sort then check diff O(nLogn)
 //! Approach 2: using sets O(n)
 // class Solution
 // {
