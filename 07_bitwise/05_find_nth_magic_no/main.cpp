@@ -33,7 +33,7 @@ int main()
   //?1-> 0001
   //?2-> 0001
   int n = 3;
-  cout << "binary: ";
+  cout << "binaryty: ";
   cout << bitset<10>(n) << endl; // 10 is the length of stored no
   
   cout << find_magic(n) << endl;
