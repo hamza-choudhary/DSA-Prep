@@ -5,8 +5,8 @@ using namespace std;
 bool is_power_in_2(int n)
 {
 
-  // all numbers in power are like this 
-  // 100, 1, 1000, 10000, 10000, 
+  // all numbers in power are like this
+  // 100, 1, 1000, 10000, 10000,
   // their msb is 1 and all bits are 0
 
   //! method 1 while (n > 0) take right shift and counts the number of 1's and if count is 1 then return true else false
@@ -22,7 +22,12 @@ bool is_power_in_2(int n)
   // 0111 -> n-1
   // now we just have to take & and if its 0 then it means it is in power of 2
 
-  return (n & (n-1)) == 0; //() are must as == have higher presidence
+  // exception: case if n==0 we have to return false
+
+  if (n == 0)
+    return false;
+
+  return (n & (n - 1)) == 0; //() are must as == have higher presidence
 }
 
 int main()
