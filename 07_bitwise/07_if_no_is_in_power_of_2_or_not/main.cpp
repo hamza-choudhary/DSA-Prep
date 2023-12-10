@@ -4,7 +4,6 @@ using namespace std;
 
 bool is_power_in_2(int n)
 {
-
   // all numbers in power are like this
   // 100, 1, 1000, 10000, 10000,
   // their msb is 1 and all bits are 0
