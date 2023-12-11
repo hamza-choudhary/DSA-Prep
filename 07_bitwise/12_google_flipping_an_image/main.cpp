@@ -42,7 +42,7 @@ int main()
     {
       cout << value << ", ";
     }
-    cout << "]" << endl;
+    cout << "]";
   }
 
   return 0;
