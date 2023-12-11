@@ -6,6 +6,7 @@
 		"ostream": "cpp",
 		"functional": "cpp",
 		"type_traits": "cpp",
-		"*.tcc": "cpp"
+		"*.tcc": "cpp",
+		"random": "cpp"
 	}
 }
