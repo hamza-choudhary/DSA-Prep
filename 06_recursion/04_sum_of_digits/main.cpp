@@ -13,7 +13,10 @@ int sum_of_digits(int n) {
 int main()
 {
 
-  cout <<  sum_of_digits(1111) << endl;;
+  cout <<  sum_of_digits(1111) << endl;
+
+  // cout << (int) log10(4933) + 1 << endl;
+
 
   //vector<int> arr{1, 2, 3, 4, 5, 6};
   //cout << func_name(arr) << endl;
