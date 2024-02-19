@@ -4,6 +4,8 @@ using namespace std;
 
 class Solution {
 public:
+  // if we take a transpose and reverse the elements of all rows the matrix is flipped by 90 degree following method is difficult
+  //write own small functions for rotate, match_matrix, etc
   bool findRotation(vector<vector<int>>& mat, vector<vector<int>>& target) {
     
     vector<int> matrix_1;

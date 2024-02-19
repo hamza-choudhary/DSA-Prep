@@ -1,6 +1,7 @@
 #include "bits/stdc++.h"
 
 //! watch video for understanding or draw graph by your self
+// https://www.youtube.com/watch?v=3bl85V7GzLY
 
 using namespace std;
 

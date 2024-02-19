@@ -9,7 +9,7 @@ public:
   {
     vector<int> result;
 
-    unordered_map<int, int> previous_values; // [needed value | difference] = index
+    unordered_map<int, int> previous_values; // [needed value] = index
 
     for (int i = 0; i < nums.size(); i++)
     {
