@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// https://leetcode.com/problems/array-partition/description/
+
 class Solution
 {
 public:
@@ -23,7 +25,7 @@ public:
     {
       // both lines are same as we sort the array and pairs is of size 2 and small value
       // is always gona be on left side of pair or left side of pair
-      // sum += min(nums[i], nums[i+1]);
+      //! sum += min(nums[i], nums[i+1]);
       sum += nums[i];
     }
 
