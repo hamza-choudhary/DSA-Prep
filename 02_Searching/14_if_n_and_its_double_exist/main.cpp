@@ -5,7 +5,7 @@ using namespace std;
 class Solution {
 public:
   bool checkIfExist(vector<int>& arr) {
-
+    //? do it with unordered sets or unordered hashmaps for efficient results
     for (int i=0; i<arr.size(); i++) {
       for (int j=0; j<arr.size(); j++) {
         if (i==j) 
