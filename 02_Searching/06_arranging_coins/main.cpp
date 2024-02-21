@@ -4,6 +4,13 @@ using namespace std;
 
 //! visit solution on solution tab
 
+// For 1 complete stair 1 coin needed
+// For 2 complete stair 1+2=3 coin needed
+// For 3 complete stair 1+2+3=6 coin needed
+// .
+// .
+// For k complete stair 1+2+3+...+k = k(k+1)/2 coin needed
+
 // class Solution {
 // public:
 //   int arrangeCoins(int n) {

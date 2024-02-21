@@ -2,37 +2,29 @@
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-  int peakIndexInMountainArray(vector<int>& arr) {
-    
-    long s=0;
-    long mid=0, e=arr.size()-1;
-    int i;
-
+  int peakIndexInMountainArray(vector<int> &arr)
+  {
+    int s = 0;
+    int e = arr.size() - 1;
 
     while (s <= e)
     {
-      mid = s + (e-s)/2;
-
-      if (arr[mid] > arr[mid+1] && arr[mid] > arr[mid-1])
+      int mid = s + (e - s) / 2;
+      // we simply gonna find the 2nd heighest number and when the loop
+      // will break we are gona return s
+      if (arr[mid] < arr[mid + 1])
       {
-        return mid;
+        s = mid + 1;
       }
-      else if (arr[mid] < arr[mid+1])
+      else
       {
-        s = mid+1;
-        i = mid;
+        e = mid - 1;
       }
-      else if (arr[mid] > arr[mid+1])
-      {
-        e = mid-1;
-        i = mid;
-      }
-
     }
-    
-    return i;
+    return s;
   }
 };
 
@@ -40,7 +32,7 @@ int main()
 {
   Solution s = Solution();
 
-  vector<int> arr {0, 1, 0};
+  vector<int> arr{0, 1, 0};
 
   cout << s.peakIndexInMountainArray(arr) << endl;
 

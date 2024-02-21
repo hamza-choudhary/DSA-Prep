@@ -2,30 +2,27 @@
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-  int maxSubArray(vector<int>& nums) {
-    int current_sum=0;
-    int max_sum = INT_MIN;
+  int maxSubArray(vector<int> &nums)
+  {
+    // kadanes algorithm
+    //! https://www.youtube.com/watch?v=w4W6yya1PIc
+    int sum = 0;
+    int maxi = INT_MIN;
 
-    //Kadanes algorithm
     for (int i = 0; i < nums.size(); i++)
     {
-      current_sum += nums[i];
+      sum += nums[i];
 
-      if (current_sum > max_sum) 
+      maxi = max(maxi, sum);
+      if (sum < 0)
       {
-        max_sum = current_sum;
+        sum = 0;
       }
-      
-      if (current_sum < 0)
-      {
-        current_sum = 0;
-      }
-
     }
-    
-    return max_sum;
+    return maxi;
   }
 };
 
@@ -33,7 +30,7 @@ int main()
 {
   Solution s = Solution();
 
-  vector<int> nums = {-2,-3,-4,-5, -1};
+  vector<int> nums = {-2, -3, -4, -5, -1};
 
   cout << s.maxSubArray(nums);
 

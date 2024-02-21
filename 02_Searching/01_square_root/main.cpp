@@ -4,30 +4,33 @@
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-  int mySqrt(int x) {
-    
-    long long s = 0, e = INT_MAX, mid=0;
-    int ans = 0;
-
-
+  int mySqrt(int x)
+  {
+    if (x == 1 || x == 0)
+      return x;
+    int s = 1;
+    int e = x / 2;
     while (s <= e)
     {
-      mid = s + (e - s)/2; //prevent overfloe errors
+      int long mid = s + (e - s) / 2;
 
-      if (mid*mid <= x)
+      if (mid * mid == x)
       {
-        ans = mid;
-        s = mid + 1;
+        return mid;
       }
-      else 
+      else if (mid * mid > x)
       {
         e = mid - 1;
       }
+      else if (mid * mid < x)
+      {
+        s = mid + 1;
+      }
     }
-
-    return ans;
+    return e;
   }
 };
 
@@ -36,6 +39,6 @@ int main()
   Solution s = Solution();
 
   cout << s.mySqrt(8);
-  
+
   return 0;
 }
