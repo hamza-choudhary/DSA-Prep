@@ -2,42 +2,45 @@
 
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> sortByBits(vector<int>& arr) {
-      
-      sort(arr.begin(), arr.end(), [](const int &a, const int &b) -> bool {
-        int x = a;
-        int y = b;
+  vector<int> sortByBits(vector<int> &arr)
+  {
+    sort(arr.begin(), arr.end(), [](const int &a, const int &b) -> bool
+         {
+            int x = a;
+            int y = b;
+            int count_a = 0;
+            int count_b = 0;
+            // count bits of a
+            while (x) {
+                //    11011    (n)
+                //  & 00001    (1)
+                //  --------
+                //    00001    (Result)
 
-        int count_a=0;
-        int count_b=0;
+                count_a += x & 1;
+                x = x >> 1;
+            }
+            // count bits of b
+            while (y) {
+                count_b += y & 1;
+                y = y >> 1;
+            }
+            if (count_a == count_b) {
+                return b > a;
+            }
+            return count_b > count_a; });
 
-        while(x)
-        {
-          x = x & (x - 1);
-          count_a++;
-        }
-        while(y)
-        {
-          y = y & (y - 1);
-          count_b++;
-        }
-
-        if (count_a == count_b)
-          return b > a;
-
-        return count_b > count_a;
-      });
-
-      return arr;
-    }
+    return arr;
+  }
 };
 
 int main()
 {
-  vector<int> arr{1024,512,256,128,64,32,16,8,4,2,1};
-  vector<int> arr2{0,1,2,3,4,5,6,7,8};
+  vector<int> arr{1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1};
+  vector<int> arr2{0, 1, 2, 3, 4, 5, 6, 7, 8};
 
   Solution s = Solution();
   cout << boolalpha << endl;

@@ -10,7 +10,7 @@ public:
     vector<int> copy_arr (arr);
     sort(copy_arr.begin(), copy_arr.end());
 
-    unordered_map<int, int> rank;
+    unordered_map<int, int> rank; //number | rank
 
     //assign rank;
     for (int i=0; i<copy_arr.size(); i++)
