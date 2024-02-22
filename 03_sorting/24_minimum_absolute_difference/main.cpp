@@ -25,8 +25,8 @@ public:
         min = diff;
 
         // result.clear(); // Clear all elements
-        // result = vector<vector<int>>(); //! Reassign to an empty vector more effieciet way as clear did not release memory
-        result.clear();
+        result = vector<vector<int>>(); //! Reassign to an empty vector more effieciet way as clear did not release memory
+        // result.clear();
         result.push_back({arr[i], arr[i+1]});
       }
       else if (diff == min)
