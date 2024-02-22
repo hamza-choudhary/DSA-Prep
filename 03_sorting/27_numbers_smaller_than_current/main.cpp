@@ -5,10 +5,29 @@ using namespace std;
 class Solution
 {
 public:
+  // vector<int> smallerNumbersThanCurrent(vector<int> &nums)
+  // {
+  //   vector<int> ans = nums;
+  //   unordered_map<int, int> m;
+
+  //   sort(ans.begin(), ans.end());
+
+  //   for (int i = ans.size() - 1; i >= 0; i--)
+  //   {
+  //     m[ans[i]] = i;
+  //   }
+
+  //   for (int i = 0; i < nums.size(); i++)
+  //   {
+  //     nums[i] = m[nums[i]];
+  //   }
+
+  //   return nums;
+  // }
   vector<int> smallerNumbersThanCurrent(vector<int> &nums)
   {
     //! https://youtu.be/C5u_hvbq1qQ?t=605
-
+    // we can do it with maps as well
     vector<int> bucket(101);
 
     for (int i = 0; i < nums.size(); i++)
