@@ -7,34 +7,26 @@ class Solution
 public:
   bool halvesAreAlike(string s)
   {
-
-    int firstHalf = 0;
-    int secondHalf = 0;
-
-    vector<char> vowels{'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-
-    for (int i = 0; i < s.size() / 2; i++)
+    int count_1 = 0;
+    int count_2 = 0;
+    for (int i = 0; i < s.size(); i++)
     {
-
-      for (int j = 0; j < vowels.size(); j++)
+      if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' ||
+          s[i] == 'u' || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' ||
+          s[i] == 'O' || s[i] == 'U')
       {
-        if (vowels[j] == s[i])
+        if (i < s.size() / 2)
         {
-          firstHalf++;
-          break;
+          count_1++;
         }
-      }
-      for (int j = 0; j < vowels.size(); j++)
-      {
-        if (vowels[j] == s[(s.size() / 2) + i])
+        else
         {
-          secondHalf++;
-          break;
+          count_2++;
         }
       }
     }
 
-    return firstHalf == secondHalf;
+    return count_1 == count_2;
   }
 };
 
