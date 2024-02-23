@@ -22,6 +22,36 @@ public:
 
     return s1 == s2;
   }
+  //! approach 2:
+  // bool arrayStringsAreEqual(vector<string> &word1, vector<string> &word2)
+  // {
+  //   int i = 0;
+  //   int j = 0;
+  //   int pointer_1 = 0;
+  //   int pointer_2 = 0;
+
+  //   while (i < word1.size() && j < word2.size())
+  //   {
+  //     if (word1[i][pointer_1++] != word2[j][pointer_2++])
+  //     {
+  //       return false;
+  //     }
+
+  //     if (pointer_1 >= word1[i].size())
+  //     {
+  //       // or you can use pointer_1 < word[i].size() - 1
+  //       pointer_1 = 0;
+  //       i++;
+  //     }
+  //     if (pointer_2 >= word2[j].size())
+  //     {
+  //       pointer_2 = 0;
+  //       j++;
+  //     }
+  //   }
+
+  //   return i == word1.size() && j == word2.size();
+  // }
 };
 
 int main()
