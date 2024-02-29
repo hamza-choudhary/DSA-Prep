@@ -10,6 +10,8 @@
 		"*.tcc": "cpp",
 		"random": "cpp",
 		"vector": "cpp",
-		"new": "cpp"
+		"new": "cpp",
+		"string_view": "cpp",
+		"regex": "cpp"
 	}
 }

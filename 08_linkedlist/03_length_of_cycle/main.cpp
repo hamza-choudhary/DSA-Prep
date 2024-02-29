@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// https://leetcode.com/problems/merge-two-sorted-lists/
-
 class ListNode
 {
 public:
@@ -24,6 +22,7 @@ public:
   // }
 };
 
+//! ther is no question on leet-code it is in video
 class Solution
 {
 public:
