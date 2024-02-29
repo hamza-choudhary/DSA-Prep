@@ -1,5 +1,6 @@
 {
 	"files.associations": {
+		"*.ejs": "html",
 		"*.js": "javascriptreact",
 		"*.jsx": "javascriptreact",
 		"iostream": "cpp",
@@ -8,6 +9,7 @@
 		"type_traits": "cpp",
 		"*.tcc": "cpp",
 		"random": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"new": "cpp"
 	}
 }
