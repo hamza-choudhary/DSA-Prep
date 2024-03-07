@@ -66,7 +66,7 @@ public:
       populate(node->right);
     }
   }
-  //! height of tree
+  //! height of tree || also post order traversal
   int height(Node *node) {
     if (node == nullptr) {
       return 0;

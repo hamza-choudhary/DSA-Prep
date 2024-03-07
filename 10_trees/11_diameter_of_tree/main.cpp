@@ -30,7 +30,7 @@ public:
     {
       return 0;
     }
-
+    //! this is post order traversal and also it is depth first search
     int leftHeight = height(node->left);
     int rightHeight = height(node->right);
 
