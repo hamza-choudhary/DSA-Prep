@@ -66,7 +66,17 @@ public:
       populate(node->right);
     }
   }
+  //! height of tree
+  int height(Node *node) {
+    if (node == nullptr) {
+      return 0;
+    }
 
+    int leftHeight = height(node->left);
+    int rightHeight = height(node->right);
+
+    return max(leftHeight, rightHeight) + 1;
+  }
   //! PRE order
   void preOrder()
   {
@@ -117,7 +127,6 @@ public:
   {
     display(root, "");
   }
-
   void display(Node *node, string indent)
   {
     if (node == nullptr)
@@ -128,11 +137,11 @@ public:
     display(node->left, indent + "\t");
     display(node->right, indent + "\t");
   }
+  
   void prettyDisplay()
   {
     prettyDisplay(root, 0);
   }
-
   void prettyDisplay(Node *node, int level)
   {
     if (node == nullptr)
