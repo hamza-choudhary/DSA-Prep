@@ -52,7 +52,7 @@ public:
     {
       if (nums[i] == 0)
       {
-        nums[i] == 0;
+        nums[i] = 0;
       }
       else
       {

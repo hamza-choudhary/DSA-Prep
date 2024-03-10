@@ -3,8 +3,7 @@
 using namespace std;
 
 //! WHEN GIVEN NO.S FROM RANGE 1 TO N => USE CYCLIC SORT
-// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
-
+// https://leetcode.com/problems/find-the-duplicate-number/description/
 class Solution
 {
 public:
